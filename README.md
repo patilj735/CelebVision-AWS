@@ -1,10 +1,13 @@
-# 🔍 CelebVision-AWS
-
 CelebVision-AWS is an AI-powered celebrity recognition application built using AWS cloud services. Users can upload an image and identify recognized celebrities using **Amazon Rekognition**.
 
-## 🌐 Live Demo
+## 📸 Screenshots
 
-👉 **[View CelebVision Live](http://ec2-13-232-140-60.ap-south-1.compute.amazonaws.com)**
+### 🌐 Web Application
+
+![CelebVision-AWS Web Application](https://github.com/user-attachments/assets/8ac9c7dc-def4-4ff5-b2dd-987eebe1a20e)
+![CelebVision-AWS Detection_Page](https://github.com/user-attachments/assets/85fd29c1-2579-4c19-b3ee-3486506cdc44)
+![CelebVision-AWS Detection_History](https://github.com/user-attachments/assets/5e8ed911-0496-4904-8856-43fa3b8ef363)
+
 
 ## 🚀 Features
 
