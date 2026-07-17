@@ -1,0 +1,297 @@
+/* Google Font */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#1e293b,#312e81,#0f172a);
+    background-size:400% 400%;
+    animation:gradientBG 12s ease infinite;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+@keyframes gradientBG{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    padding:40px 0;
+}
+
+/* Header */
+
+header{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+header h1{
+    font-size:3rem;
+    font-weight:700;
+    color:#ffffff;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:1.1rem;
+    color:#d1d5db;
+}
+
+/* Glass Card */
+
+.card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:20px;
+    padding:25px;
+    margin-bottom:30px;
+    box-shadow:0 8px 30px rgba(0,0,0,.35);
+}
+
+.card h2{
+    margin-bottom:20px;
+    color:#ffffff;
+}
+
+/* Upload */
+
+.upload-box{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+input[type=file]{
+    width:100%;
+    padding:14px;
+    border:2px dashed #60a5fa;
+    border-radius:12px;
+    background:rgba(255,255,255,.05);
+    color:white;
+    cursor:pointer;
+}
+
+input[type=file]::file-selector-button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-right:15px;
+}
+
+input[type=file]::file-selector-button:hover{
+    background:#1d4ed8;
+}
+
+/* Preview */
+
+#preview{
+    display:none;
+    margin-top:25px;
+    width:280px;
+    max-width:100%;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+/* Button */
+
+button{
+    width:100%;
+    margin-top:25px;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:600;
+    color:white;
+    cursor:pointer;
+    background:linear-gradient(90deg,#2563eb,#7c3aed);
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(37,99,235,.4);
+}
+
+/* Loading */
+
+.loading{
+    display:none;
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.spinner{
+    width:65px;
+    height:65px;
+    border:6px solid rgba(255,255,255,.2);
+    border-top:6px solid #60a5fa;
+    border-radius:50%;
+    margin:auto;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+.loading p{
+    margin-top:15px;
+    color:#d1d5db;
+}
+
+/* Result */
+
+#result{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+}
+
+.result-card{
+    background:rgba(255,255,255,.08);
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+    transition:.3s;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.result-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 25px rgba(0,0,0,.3);
+}
+
+.result-card h3{
+    color:#60a5fa;
+    margin-bottom:15px;
+}
+
+.result-card p{
+    margin:8px 0;
+    font-size:16px;
+}
+
+/* Confidence Badge */
+
+.badge{
+    display:inline-block;
+    margin-top:12px;
+    background:#16a34a;
+    color:white;
+    padding:8px 18px;
+    border-radius:50px;
+    font-size:14px;
+    font-weight:600;
+}
+
+/* Table */
+
+.table-container{
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#2563eb;
+    padding:14px;
+    color:white;
+}
+
+td{
+    padding:14px;
+    text-align:center;
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+tr:hover{
+    background:rgba(255,255,255,.05);
+}
+
+/* Empty Message */
+
+.empty{
+    text-align:center;
+    color:#cbd5e1;
+    padding:30px;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    margin-top:40px;
+    color:#cbd5e1;
+    font-size:14px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+header h1{
+    font-size:2.2rem;
+}
+
+.card{
+    padding:18px;
+}
+
+button{
+    font-size:16px;
+}
+
+#preview{
+    width:220px;
+}
+
+}
+
+@media(max-width:500px){
+
+header h1{
+    font-size:1.8rem;
+}
+
+header p{
+    font-size:15px;
+}
+
+th,
+td{
+    font-size:13px;
+    padding:10px;
+}
+
+.result-card{
+    padding:15px;
+}
+
+}

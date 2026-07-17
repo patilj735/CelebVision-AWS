@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CelebVision AI</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <div class="container">
+
+        <!-- Header -->
+
+        <header>
+
+            <h1>⭐ CelebVision AI</h1>
+
+            <p>
+                AI Powered Celebrity Recognition Platform
+            </p>
+
+        </header>
+
+        <!-- Upload Card -->
+
+        <section class="card">
+
+            <h2>Upload Celebrity Image</h2>
+
+            <div class="upload-box">
+
+                <input type="file"
+                       id="imageInput"
+                       accept="image/*">
+
+                <img id="preview"
+                     src=""
+                     alt="Preview">
+
+            </div>
+
+            <button id="detectBtn">
+
+                Detect Celebrity
+
+            </button>
+
+        </section>
+
+        <!-- Loading -->
+
+        <section
+            id="loading"
+            class="loading">
+
+            <div class="spinner"></div>
+
+            <p>
+
+                Detecting celebrities...
+
+            </p>
+
+        </section>
+
+        <!-- Result -->
+
+        <section
+            id="resultCard"
+            class="card">
+
+            <h2>
+
+                Detection Result
+
+            </h2>
+
+            <div id="result">
+
+            </div>
+
+        </section>
+
+        <!-- History -->
+
+        <section
+            class="card">
+
+            <h2>
+
+                Detection History
+
+            </h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Image</th>
+
+                            <th>Celebrities</th>
+
+                            <th>Count</th>
+
+                            <th>Timestamp</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="historyTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+
+</html>
